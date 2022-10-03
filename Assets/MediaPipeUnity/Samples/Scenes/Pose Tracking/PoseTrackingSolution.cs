@@ -71,12 +71,14 @@ namespace Mediapipe.Unity.PoseTracking
         graphRunner.OnRoiFromLandmarksOutput += OnRoiFromLandmarksOutput;
       }
 
+
+
       var imageSource = ImageSourceProvider.ImageSource;
       SetupAnnotationController(_poseDetectionAnnotationController, imageSource);
       SetupAnnotationController(_poseLandmarksAnnotationController, imageSource);
       SetupAnnotationController(_poseWorldLandmarksAnnotationController, imageSource);
-      SetupAnnotationController(_segmentationMaskAnnotationController, imageSource);
-      _segmentationMaskAnnotationController.InitScreen(imageSource.textureWidth, imageSource.textureHeight);
+      // SetupAnnotationController(_segmentationMaskAnnotationController, imageSource);
+      // _segmentationMaskAnnotationController.InitScreen(imageSource.textureWidth, imageSource.textureHeight);
       SetupAnnotationController(_roiFromLandmarksAnnotationController, imageSource);
     }
 
@@ -105,7 +107,7 @@ namespace Mediapipe.Unity.PoseTracking
       _poseDetectionAnnotationController.DrawNow(poseDetection);
       _poseLandmarksAnnotationController.DrawNow(poseLandmarks);
       _poseWorldLandmarksAnnotationController.DrawNow(poseWorldLandmarks);
-      _segmentationMaskAnnotationController.DrawNow(segmentationMask);
+      // _segmentationMaskAnnotationController.DrawNow(segmentationMask);
       _roiFromLandmarksAnnotationController.DrawNow(roiFromLandmarks);
     }
 
@@ -126,7 +128,7 @@ namespace Mediapipe.Unity.PoseTracking
 
     private void OnSegmentationMaskOutput(object stream, OutputEventArgs<ImageFrame> eventArgs)
     {
-      _segmentationMaskAnnotationController.DrawLater(eventArgs.value);
+      // _segmentationMaskAnnotationController.DrawLater(eventArgs.value);
     }
 
     private void OnRoiFromLandmarksOutput(object stream, OutputEventArgs<NormalizedRect> eventArgs)

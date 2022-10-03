@@ -322,7 +322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 043ccd99cf82b3cc9bf2e00956ce2b93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _configAsset: {fileID: 4900000, guid: 5199c62ac0186dac28358b2ef639ef9b, type: 3}
+  _configAsset: {fileID: 4900000, guid: 6ea07f5848d6b40d490cea4f5c81b41f, type: 3}
   _screen: {fileID: 560904347}
   _width: 640
   _height: 480
